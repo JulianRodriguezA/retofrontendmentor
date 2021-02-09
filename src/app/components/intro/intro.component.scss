@@ -1,0 +1,77 @@
+@import "../../../assets/style/colors";
+.intro-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #fff;
+  .illus {
+    display: block;
+    margin: 0 auto;
+    .img {
+      max-width: 140%;
+      margin-left: 10px;
+    }
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    color: $very-Dark-Blue;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2%;
+    text-align: center;
+    margin: 46px 0 28px;
+  }
+  .paragraph {
+    color: $grayish-Violet;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 3%;
+    text-align: center;
+    margin: 0 0 34px;
+  }
+  .btn {
+    font-family: "Poppins", sans-serif;
+    background-color: $cyan;
+    color: rgb(233, 255, 255);
+    border: none;
+    font-size: 20px;
+    padding: 12px 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro-container {
+    flex-direction: row;
+    max-width: 1110px;
+    margin: 10px auto 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .text {
+    display: block !important;
+  }
+  .title {
+    font-size: 80px !important;
+    letter-spacing: 4.5% !important;
+    text-align: left !important;
+    margin: 46px 0 28px;
+  }
+  .paragraph {
+    font-size: 22px !important;
+    text-align: left !important;
+    margin: 0 0 34px;
+  }
+}
