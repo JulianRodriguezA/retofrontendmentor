@@ -1,1 +1,21 @@
-<p>nav works!</p>
+<header class="header">
+    <img class="logo" src="../../../assets/images/logo.svg" alt="logo">
+    <div class="navs" [class.active]="active">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href=# class="link">Features</a></li>
+                <li><a href=# class="link">Princing</a></li>
+                <li><a href=# class="link">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <button class="b-btn">Login</button>
+            <button class="b-btn-blue">Sign up</button>
+        </div>
+    </div>
+    <div class="burger" (click)="active = !active">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>

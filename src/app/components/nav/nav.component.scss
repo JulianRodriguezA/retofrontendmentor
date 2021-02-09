@@ -1,0 +1,129 @@
+@import "../../../assets/style/colors";
+.burger {
+  display: none;
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: $grayish-Violet;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1110px;
+  margin: 50px auto 0;
+  .logo {
+    margin-right: 15px;
+  }
+  .navs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      .link {
+        text-decoration: none;
+        margin-left: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $grayish-Violet;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: $very-Dark-Blue;
+        }
+      }
+    }
+  }
+  .b-btn {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    margin-right: 40px;
+    color: $grayish-Violet;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $very-Dark-Blue;
+    }
+  }
+  .b-btn-blue {
+    font-family: "Poppins", sans-serif;
+    background-color: $cyan;
+    color: rgb(233, 255, 255);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    height: 40px;
+    width: 105px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  .active {
+    transform: translateX(-50%) !important;
+  }
+  .navs {
+    position: absolute;
+    flex-direction: column;
+    background-color: $dark-Violet;
+    width: 87.2% !important;
+    border-radius: 11px;
+    left: 50%;
+    top: 108px;
+    transform: translateX(150%);
+    transition: transform 0.2s ease-in-out;
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 6px 0 0 0;
+      li {
+        margin-top: 19px;
+        margin-bottom: 19px;
+      }
+      .link {
+        margin-left: 0px !important;
+        color: rgb(233, 255, 255) !important;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      padding: 19px 0 40px;
+      border-top: 1px solid $grayish-Violet;
+      .b-btn {
+        margin-right: 0;
+        color: rgb(233, 255, 255);
+      }
+      .b-btn-blue {
+        margin-top: 26px;
+        width: 279px;
+      }
+    }
+  }
+  .burger {
+    display: block;
+  }
+}
