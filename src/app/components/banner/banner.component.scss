@@ -1,0 +1,54 @@
+@import "../../../assets/style/colors";
+.container-banner {
+  width: 100vw;
+  height: 300px;
+  background-image: url("../../../assets/images/bg-boost-mobile.svg");
+  background-position: right;
+  background-size: cover;
+  background-color: $dark-Violet;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .banner-title {
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+    margin: 104px 0 20px;
+  }
+  .btn {
+    font-family: "Poppins", sans-serif;
+    background-color: $cyan;
+    color: rgb(233, 255, 255);
+    margin-bottom: 90px;
+    border: none;
+    font-size: 20px;
+    padding: 12px 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+//768px y 1024px
+@media screen and (min-width: 768px) {
+  .container-banner {
+    height: 250px;
+    background-image: url("../../../assets/images/bg-boost-desktop.svg");
+    background-size: cover;
+
+    .banner-title {
+      margin: 66px 0 39px;
+      font-size: 40px;
+      font-weight: 700;
+    }
+    .btn {
+      margin-bottom: 57px;
+    }
+  }
+}
