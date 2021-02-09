@@ -1,0 +1,91 @@
+@import "../../../assets/style/colors";
+footer {
+  background-color: $very-dark-Violet;
+  padding: 20px 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(225, 3%, 72%);
+}
+.attribution a {
+  color: $cyan;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  svg path {
+    fill: $gray;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  &-title {
+    color: $gray;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  &-item {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: $grayish-Violet;
+    margin: 5px 0;
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+  }
+}
+.social {
+  .icon {
+    margin: 20px 10px;
+    &:hover {
+      path {
+        fill: $cyan;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 20px 0px;
+  }
+  .footer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1100px;
+    .columns {
+      display: flex;
+      width: 480px;
+      justify-content: space-around;
+    }
+    .column {
+      &-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      &-item {
+        text-align: left;
+      }
+    }
+    .social {
+      .icon {
+        margin: 0px 10px;
+      }
+    }
+  }
+}
