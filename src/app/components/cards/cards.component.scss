@@ -1,0 +1,112 @@
+@import "../../../assets/style/colors";
+
+.advanced {
+  background-color: hsl(230, 25%, 95%);
+  width: 100vw;
+  padding-bottom: 1px;
+  &-text {
+    margin: 0px 20px 0px;
+    padding: 57px 0 42px;
+  }
+  &-title {
+    font-size: 27px;
+    color: $very-dark-Violet;
+    text-align: center;
+  }
+  &-paragraph {
+    font-size: 18px;
+    font-weight: 500;
+    color: $grayish-Violet;
+    text-align: center;
+  }
+  .cards-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  app-card:first-child {
+    position: relative;
+    z-index: 10;
+    &::after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 80px;
+      background-color: $cyan;
+      position: absolute;
+      top: 74%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+  app-card:nth-child(2) {
+    position: relative;
+    z-index: 20;
+    &::after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 80px;
+      background-color: $cyan;
+      position: absolute;
+      top: 74%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+  app-card:nth-child(3) {
+    position: relative;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .advanced-title {
+    font-size: 42px;
+  }
+  .advanced-paragraph {
+    font-size: 20px;
+    margin-left: 380px;
+    margin-right: 380px;
+  }
+  .cards-group {
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: flex-start !important;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  app-card:first-child {
+    position: relative;
+    z-index: 10;
+    &::after {
+      content: "";
+      display: block;
+      width: 32px !important;
+      height: 8px !important;
+      background-color: $cyan;
+      position: absolute;
+      top: 110px !important;
+      left: 100% !important;
+      transform: translateX(0%) !important;
+    }
+  }
+  app-card:nth-child(2) {
+    margin-top: 42px;
+    &::after {
+      content: "";
+      display: block;
+      width: 32px !important;
+      height: 8px !important;
+      background-color: $cyan;
+      position: absolute;
+      top: 110px !important;
+      left: 100% !important;
+      transform: translateX(0%) !important;
+    }
+  }
+  app-card:nth-child(3) {
+    margin-top: 84px;
+  }
+}

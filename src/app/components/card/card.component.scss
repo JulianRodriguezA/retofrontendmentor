@@ -1,0 +1,63 @@
+@import "../../../assets/style/colors";
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.card {
+  background-color: white;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  &-image {
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+    .logo {
+      background-color: $dark-Violet;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  &-title {
+    text-align: center;
+    color: $very-dark-Violet;
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+  &-body {
+    text-align: center;
+    color: $grayish-Violet;
+    font-size: 16px;
+    margin: 0 30px 46px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    &-image {
+      justify-content: flex-start;
+      margin-left: 32px;
+    }
+    &-title {
+      text-align: left;
+      margin-left: 32px;
+    }
+    &-body {
+      text-align: left;
+    }
+  }
+}
