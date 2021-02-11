@@ -7,6 +7,7 @@
   .illus {
     display: block;
     margin: 0 auto;
+    overflow: hidden;
     .img {
       max-width: 140%;
       margin-left: 10px;
@@ -62,6 +63,9 @@
 @media screen and (min-width: 1100px) {
   .text {
     display: block !important;
+  }
+  .illus {
+    overflow: visible !important;
   }
   .title {
     font-size: 80px !important;
