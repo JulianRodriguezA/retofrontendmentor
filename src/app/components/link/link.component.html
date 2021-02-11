@@ -1,1 +1,14 @@
-<p>link works!</p>
+<!--<p *ngFor="let link of links">link works!</p>
+-->
+<div class="links-container">
+    <div *ngFor="let link of links" class="link">
+        <p class="original">
+            {{link.original}}
+        </p>
+        <div class="new">
+            <input type="text" #text value="{{link.new}}" id="myInput" readonly class="new-link">
+            <button *ngIf="!link.copied" (click)="copyLink(text,link)" id="myInput" class="btn">Copy</button>
+            <button *ngIf="link.copied" (click)="copyLink(text,link)" id="myInput" class="btn copied">Copied!</button>
+        </div>
+    </div>
+</div>

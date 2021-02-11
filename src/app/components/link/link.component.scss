@@ -1,0 +1,85 @@
+@import "../../../assets/style/colors";
+
+.links-container {
+  width: 100vw;
+  background-color: hsl(230, 25%, 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  .link {
+    background-color: white;
+    margin: 12px 0;
+    padding: 17px;
+    width: 88%;
+    border-radius: 5px;
+    max-width: 1100px;
+
+    .original {
+      color: $very-Dark-Blue;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    .new {
+      padding-top: 13px;
+      display: flex;
+      flex-direction: column;
+      border-top: solid 1px $grayish-Violet;
+      font-weight: 700;
+      &-link {
+        color: $cyan;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin-bottom: 13px;
+      }
+      .copied {
+        background-color: $dark-Violet !important;
+      }
+      .btn {
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-weight: 700;
+        background-color: $cyan;
+        font-size: 16px;
+        padding: 15px 0;
+        border-radius: 5px;
+        transition: opacity 0.2s ease-in;
+        .copied {
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1110px) {
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+    .original {
+      margin-bottom: 0 !important;
+      font-size: 20px !important;
+    }
+    .new {
+      flex-direction: row !important;
+      border: none !important;
+      padding: 0 !important;
+
+      &-link {
+        margin: 0 !important;
+        text-align: right;
+        margin-right: 14px !important;
+        font-size: 21px !important;
+      }
+      .btn {
+        padding: 15px 53px !important;
+        font-size: 20px !important;
+      }
+    }
+  }
+}

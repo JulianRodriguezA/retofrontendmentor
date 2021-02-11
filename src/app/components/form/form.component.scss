@@ -1,0 +1,113 @@
+@import "../../../assets/style/colors";
+//loading
+.loader-container {
+  position: relative;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(31, 218, 218, 0.2);
+  border-right: 1.1em solid rgba(31, 218, 218, 0.2);
+  border-bottom: 1.1em solid rgba(31, 218, 218, 0.2);
+  border-left: 1.1em solid #1fdada;
+  transform: translateZ(0) scale(50%);
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg) scale(50%);
+  }
+  100% {
+    transform: rotate(360deg) scale(50%);
+  }
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, white 50%, hsl(230, 25%, 95%) 50%);
+  margin-top: 62px;
+  .form {
+    padding: 52px 65px;
+    background-image: url("../../../assets/images/bg-shorten-desktop.svg");
+    background-position: right;
+    background-size: cover;
+    background-color: $dark-Violet;
+    background-repeat: no-repeat;
+    max-width: 1110px;
+    border-radius: 12px;
+    display: flex;
+    .inputLink {
+      height: 65px;
+      width: 771px;
+      border-radius: 12px;
+      font-size: 20px;
+      border: none;
+      padding-left: 33px;
+      outline: none;
+      color: $grayish-Violet;
+    }
+    .error {
+      border: solid 4px $red;
+      color: $red;
+    }
+    .error-m {
+      color: $red;
+      position: absolute;
+      transform: translateY(75px);
+    }
+    .btn {
+      font-family: "Poppins", sans-serif;
+      margin-left: 23px;
+      color: white;
+      background-color: $cyan;
+      border: none;
+      height: 65px;
+      width: 190px;
+      border-radius: 12px;
+      font-size: 20px;
+      outline: none;
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1110px) {
+  .form {
+    width: 88.25%;
+  }
+}
+@media screen and (max-width: 864px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 22px !important;
+    .inputLink {
+      width: 100% !important;
+    }
+    .btn {
+      margin: 16px 0 !important;
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 764px) {
+  .form {
+    background-image: url("../../../assets/images/bg-shorten-mobile.svg") !important;
+    background-size: contain !important;
+  }
+}
