@@ -71,6 +71,7 @@ footer {
     .columns {
       width: 480px;
       justify-content: space-around;
+      display: flex;
     }
     .column {
       &-title {
